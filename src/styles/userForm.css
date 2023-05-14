@@ -1,0 +1,36 @@
+.form {
+  width: 500px;
+  padding: 50px 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.form .input {
+  width: 400px;
+  font-size: 16px;
+}
+.form .radioLabel {
+  padding: 0 10px !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+.form .selectedImage {
+  border: 3px solid #1976d2;
+}
+
+@media only screen and (max-width: 650px) {
+  .input {
+    width: 300px;
+  }
+  .avatar {
+    width: 46px !important;
+    height: 46px !important;
+  }
+}/*# sourceMappingURL=userForm.css.map */
