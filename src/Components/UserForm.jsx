@@ -5,7 +5,7 @@ import {
     FormControl, Stack, InputLabel, MenuItem, Select, FormLabel, RadioGroup, Grid, FormControlLabel, Alert, Radio, Avatar
 } from '@mui/material';
 import "../styles/userForm.css"
-
+import axios from "axios";
 import Icon1 from '../assets/Image/resim1.png'
 import Icon2 from '../assets/Image/resim2.png'
 import Icon3 from '../assets/Image/resim3.png'
@@ -22,6 +22,7 @@ export default function UserForm() {
     const [role, setRole] = useState('');
     const [labelVisible, setLabelVisible] = useState(true);
     const [avatar, setAvatar] = useState(false);
+    const [error, setError] = useState(false);
 
     const options = [
         { value: 'icon1', label: 'Female', icon: Icon1 },
@@ -41,8 +42,29 @@ export default function UserForm() {
     });
     const handleSubmit = (event) => {
         event.preventDefault();
-        resetForm();
-        console.log(event);
+        if (avatar == false) {
+            setError(true);
+        } else {
+            setError(false);
+            const data = {
+                fullName: fullName.trim(),
+                userName: userName.trim(),
+                email: email.trim(),
+                role: role.trim(),
+                avatar: avatar
+            };
+            axios.post('http://localhost:3000/users', data)
+                .then(res => {
+
+                    console.log(res.data);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+            resetForm();
+        }
+
     };
 
     const resetForm = () => {
@@ -141,7 +163,7 @@ export default function UserForm() {
                             </FormControl>
                         </Grid>
                         < Grid item xs={12} >
-                            <FormControl required error={!avatar} sx={{ gap: '20px' }} >
+                            <FormControl required error={error} sx={{ gap: '20px' }} >
                                 <FormLabel className='radioLabel' id="demo-row-radio-buttons-group-label">Select Avatar</FormLabel>
                                 <RadioGroup
 
@@ -176,7 +198,7 @@ export default function UserForm() {
                             </FormControl>
                         </Grid>
                         <Grid item xs={12}>
-                            {!avatar && <Alert className='alert' severity="error">Selecting an avatar is mandatory!</Alert>}
+                            {error && <Alert className='alert' severity="error">Selecting an avatar is mandatory!</Alert>}
                         </Grid>
                         <Button size='large' variant='contained' type="submit" color='primary'>Create User</Button>
                     </Grid>

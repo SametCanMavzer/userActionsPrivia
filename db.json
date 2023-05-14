@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "fullName": "Samet Can Mavzer",
+      "userName": "MavzerCan",
+      "email": "sametmavzer6@gmail.com",
+      "role": "Subscriber",
+      "avatar": "/src/assets/Image/resim2.png",
+      "id": 1
+    },
+    {
+      "fullName": "aşkomm",
+      "userName": "sadsad",
+      "email": "sametmavzer6@gmail.com",
+      "role": "Administrator",
+      "avatar": "/src/assets/Image/resim1.png",
+      "id": 2
+    },
+    {
+      "fullName": "Gülsen Mavzer",
+      "userName": "Mavzer",
+      "email": "mavzer7534@gmail.com",
+      "role": "Administrator",
+      "avatar": "/src/assets/Image/resim5.png",
+      "id": 3
+    }
+  ]
+}
