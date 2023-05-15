@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "fullName": "Samet Can Mavzer",
-      "userName": "MaVZeRCaN",
-      "email": "sametmavzer6@gmail.com",
-      "role": "Author",
-      "avatar": "/src/assets/Image/resim2.png",
-      "id": 1
-    },
-    {
       "fullName": "Emir Aksoy",
       "userName": "Aksoy63",
       "email": "emir.aksoy63@gmail.com",
@@ -207,6 +199,14 @@
       "role": "Contributor",
       "avatar": "/src/assets/Image/resim3.png",
       "id": 31
+    },
+    {
+      "fullName": "Samet Can Mavzer",
+      "userName": "MavzerCan",
+      "email": "sametmavzer675@gmail.com",
+      "role": "Contributor",
+      "avatar": "/src/assets/Image/resim3.png",
+      "id": 32
     }
   ]
 }
