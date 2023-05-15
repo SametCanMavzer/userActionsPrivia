@@ -4,7 +4,8 @@
 
  * It is a project created using React and Material UI. It has a user form where you can enter information. If all required fields are filled in correctly, the information is saved to a fake database. Then, on the user table page, you can view, add, delete and search for users by username or email. You can also filter the results using the buttons on the tabs section.
 
- > I think my project is not working on Netlify because I used a mock API. That’s why I couldn’t publish the site, but I showed it visually with all the details. Thank you in advance.
+  * [To go to the site => ](https://priviausers.netlify.app/)
+
 
 ![resim1](https://github.com/SametCanMavzer/userActionsPrivia/assets/120662955/b3f9668a-0eaf-4dea-b63e-d04c35faed93)
 ![resim2](https://github.com/SametCanMavzer/userActionsPrivia/assets/120662955/fcf60633-8e74-4b2a-94da-77c3761cc189)
