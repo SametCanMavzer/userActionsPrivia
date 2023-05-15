@@ -1,5 +1,6 @@
 
 import UserForm from './Components/UserForm';
+import UserTable from './Components/UserTable';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
 
     <>
 
-      <UserForm />
+      {/* <UserForm /> */}
+      <UserTable />
 
 
     </>

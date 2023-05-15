@@ -1,6 +1,6 @@
 .form {
   width: 500px;
-  padding: 50px 20px;
+  padding: 50px 0;
   border-radius: 10px;
   position: absolute;
   top: 50%;
@@ -23,6 +23,10 @@
 }
 .form .selectedImage {
   border: 3px solid #1976d2;
+}
+
+.appbar {
+  background-color: white !important;
 }
 
 @media only screen and (max-width: 650px) {
