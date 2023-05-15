@@ -6,9 +6,7 @@
 
 >I think my project is not working on Netlify because I used a mock API. That’s why I couldn’t publish the site, but I showed it visually with all the details. Thank you in advance.
 
-![resim1](https://imgur.com/a/kFpbgga)
-![resim2](https://imgur.com/a/aaEruFJ)
-![resim3](https://imgur.com/a/rtcqBBO)
-![resim4](https://imgur.com/a/m5D04au)
+![resim1](https://ibb.co/tHvtHhk)
+
 
 
