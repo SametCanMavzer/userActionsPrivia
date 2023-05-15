@@ -4,8 +4,9 @@ import {
     createTheme, ThemeProvider, FormGroup, TextField, Button,
     FormControl, Stack, InputLabel, MenuItem, Select, FormLabel, RadioGroup, Grid, FormControlLabel, Alert, Radio, Avatar
 } from '@mui/material';
-import "../styles/userForm.css"
+import "../styles/userForm.css";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import Icon1 from '../assets/Image/resim1.png'
 import Icon2 from '../assets/Image/resim2.png'
 import Icon3 from '../assets/Image/resim3.png'
@@ -23,7 +24,7 @@ export default function UserForm() {
     const [labelVisible, setLabelVisible] = useState(true);
     const [avatar, setAvatar] = useState(false);
     const [error, setError] = useState(false);
-
+    const navigate = useNavigate();
     const options = [
         { value: 'icon1', label: 'Female', icon: Icon1 },
         { value: 'icon2', label: 'Male', icon: Icon2 },
@@ -36,12 +37,13 @@ export default function UserForm() {
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#2940D3',
+                main: '#2940D3', // burada istediğiniz renk kodunu girin
             },
         },
     });
     const handleSubmit = (event) => {
         event.preventDefault();
+
         if (avatar == false) {
             setError(true);
         } else {
@@ -63,8 +65,9 @@ export default function UserForm() {
                 });
 
             resetForm();
-        }
+            navigate('/usertable');
 
+        }
     };
 
     const resetForm = () => {
@@ -74,6 +77,7 @@ export default function UserForm() {
         setRole("");
         setLabelVisible(true);
         setAvatar(false);
+
     };
 
 

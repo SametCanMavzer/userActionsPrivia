@@ -1,3 +1,5 @@
+@import "userTable";
+
 .form {
   width: 500px;
   padding: 50px 0;
@@ -27,13 +29,8 @@
   .selectedImage {
     border: 3px solid #1976d2;
   }
-
-
 }
 
-.appbar {
-  background-color: white !important;
-}
 
 @media only screen and (max-width: 650px) {
 

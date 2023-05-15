@@ -1,7 +1,7 @@
 
-import UserForm from './Components/UserForm';
-import UserTable from './Components/UserTable';
-
+import UserTable from "./pages/UserTable"
+import UserForm from './pages/UserForm';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -10,10 +10,12 @@ function App() {
 
     <>
 
-      {/* <UserForm /> */}
-      <UserTable />
+      <Routes>
 
+        <Route path='/' element={<UserForm />} />
+        <Route path='/usertable' element={<UserTable />} />
 
+      </Routes>
     </>
   )
 }
